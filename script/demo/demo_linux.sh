@@ -6,5 +6,8 @@ wget https://archive.org/download/HeroesofMightandMagicIITheSuccessionWars_1020/
 unzip h2demo.zip
 rm h2demo.zip
 
-cp -r ./DATA ./../../../data
-cp -r ./MAPS ./../../../maps
+DATA_DIR=${XDG_DATA_HOME:-$HOME/.local/share}/fheroes2
+mkdir -p "$DATA_DIR"
+
+cp -r ./DATA "$DATA_DIR/data"
+cp -r ./MAPS "$DATA_DIR/maps"
